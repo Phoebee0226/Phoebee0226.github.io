@@ -1,0 +1,344 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+    background-color: #FBF4F0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+/* section{
+    margin: 100px;
+} */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* or adjust to desired height */
+    text-align: left;
+
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Aligns children (img and text-container) in the center */
+    position: relative;
+    /* Establish a positioning context */
+    min-height: 100vh;/
+}
+
+.profile-image {
+    display: block;
+    /* Change the display to block */
+    margin: 0 auto;
+    /* Automatic margins on the left and right */
+    max-width: 100%;
+    /* Ensure it doesn't overflow the screen width */
+    height: auto;
+    /* Maintain the aspect ratio */
+}
+
+.scroll-indicator {
+    position: absolute;
+    /* Position absolutely within the .home-container */
+    bottom: 5%;
+    /* Align to the bottom */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Align precisely at the bottom center */
+}
+
+
+.scroll-arrow {
+    width: 20px;
+    /* vw unit means 'viewport width'. This will size the arrow to 5% of the viewport's width */
+    height: auto;
+    animation: float 2s ease-in-out infinite;
+    /* '2s' is the duration, 'infinite' makes it loop forever */
+    display: block;
+    /* Block display is often necessary for animations */
+    margin: 0 auto;
+    /* Centers the image if it's not inside a flex or grid container */
+}
+
+nav.primary-menu {
+    width: 100%;
+}
+
+.sticky-top {
+    background-color: #B0A695;
+    text-align: center;
+}
+
+.nav-link {
+    color: #F3EEEA;
+    width: 100%;
+    /* Full width */
+    text-align: center;
+    /* Align text to the left */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    /* Remove padding if it exists */
+    margin: 0 auto;
+    /* This will center the ul if it has a defined width */
+    width: auto;
+    /* Or set a width if you want to constrain the centered area */
+}
+
+.nav-item {
+    font-size: 120%;
+    text-align: center;
+    /* Provides spacing between nav-items */
+    flex: 0 0 auto;
+    /* Do not allow nav-items to grow or shrink */
+}
+
+.nav-icon {
+    height: auto;
+    /* Maintain aspect ratio */
+    width: 40px;
+    /* Example size. Adjust as needed */
+    flex: 0 0 auto;
+    /* Do not allow the logo to grow or shrink */
+}
+
+
+
+@media (max-width: 992px) {
+
+    /* Bootstrap's default breakpoint for navbar collapsing */
+    .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        /* Stack nav items vertically */
+        align-items: flex-start;
+        /* Align items to the start of the container (left) */
+    }
+
+    .navbar-collapse .nav-link {
+        width: 100%;
+        /* Each link will take the full width of the container */
+        text-align: left;
+        /* Keep text aligned to the left */
+    }
+
+    .navbar-collapse .nav-item {
+        width: 100%;
+        /* Make nav items full width */
+    }
+}
+
+.nav-link:hover {
+    color: #808080;
+}
+
+.section-header {
+    text-align: center;
+    background-color: #EBE3D5;
+    display: inline;
+    font-weight: bold;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.section-header-container {
+    text-align: center;
+    margin: 3rem 0rem;
+}
+
+.aboutme_mark {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .aboutme-content {
+        align-items: center;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aboutme-content {
+        font-size: 1.5rem;
+        align-items: center;
+    }
+}
+
+.aboutme-title {
+    padding-bottom: 20px;
+}
+
+.aboutme-information {
+    margin: 3rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: space-between; /* This distributes space equally between columns */
+    align-items: center; /* Aligns items vertically */
+}
+
+
+
+.aboutme-information-subtitle{
+    color: #808080;
+    font-size: 1.3rem;
+}
+
+.resume-part-header{
+    font-weight: bold;
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+.resume-content-block {
+    margin-bottom: 20px; /* Adds space between entries */
+    border-left: 4px solid #B0A695; /* Adjust the thickness and color as needed */
+    padding-left: 20px; /* Adds space between the yellow line and the text */
+}
+.resume-article-block{
+    margin: 2rem 0rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .skill-name {
+        padding-right: 50px; /* Space for percentage value on smaller screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 50%;
+        /* Smaller width on mobile devices */
+        margin-bottom: 20px;
+        /* Space between image and text on mobile */
+    }
+}
+
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+        /* Adjust pixel value for the amount of float */
+    }
+}
+
+.page {
+    min-height: 100vh;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.portfolio-header{
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel-item img {
+    height: 30rem; /* Set a fixed height for the image */
+    width: 30rem; /* Set width to always be 100% of the carousel item */
+    object-fit: contain; /* Ensure the whole image always fits within the box */
+    object-position: center; /* Center the image within the element's box */
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-image: none; /* Remove the default background */
+}
+
+.carousel-control-next-icon {
+    background: url('../images/next-button.png') no-repeat center center;
+    background-size: contain; /* Or cover, depending on your needs */
+}
+
+.carousel-control-prev-icon {
+    background: url('../images/prev-button.png') no-repeat center center;
+    background-size: contain; /* Or cover, depending on your needs */
+}
+
+/* Make sure the buttons have a size to accommodate the custom image */
+.carousel-control-next, 
+.carousel-control-prev {
+    justify-content: center; 
+    align-items: center; 
+}
+
+.portfolio-words-subtitle{
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5rem 0rem;
+}
+
+.profile-words-block {
+    margin-bottom: 20px; /* Adds space between entries */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5); /* Adjust the thickness and color as needed */
+}
