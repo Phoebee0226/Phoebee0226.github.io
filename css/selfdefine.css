@@ -255,9 +255,7 @@ nav.primary-menu {
     }
 }
 
-.page {
-    min-height: 100vh;
-}
+
 
 
 
@@ -341,4 +339,24 @@ nav.primary-menu {
 .profile-words-block {
     margin-bottom: 20px; /* Adds space between entries */
     border-bottom: 1px solid rgba(128, 128, 128, 0.5); /* Adjust the thickness and color as needed */
+}
+
+.portfolio-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering images in the container */
+    gap: 10px; /* Space between images */
+}
+
+.myImg {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    width: 100%;
+    cursor: pointer;
+    height: auto;
+    object-fit: cover; /* This will cover the area without stretching the image */
+    cursor: pointer;
+}
+
+.profile-carousel{
+    padding: 2rem 0rem;
 }
