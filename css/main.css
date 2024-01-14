@@ -1,0 +1,487 @@
+body,
+html {
+    padding: 0;
+    color: #343a40;
+    background-color: #FBF4F0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+section {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1500px;
+}
+
+.class-section{
+    width: 100%;
+}
+
+.item-container-holder {
+    padding-left: 1em;
+    /* Bootstrap default padding for container-fluid */
+    padding-right: 1em;
+    /* Bootstrap default padding for container-fluid */
+    
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.item-container, .resume-container, .item-container-no-shadow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto;
+    border-radius: 1em;
+    padding: 25px;
+    background-color: #F3EEEA;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+.item-container:hover, .resume-container:hover{
+    /* Slightly raise the container */
+    transform: translateY(-2px);
+    /* Move up by 2px */
+    /* Apply a shadow to give the effect of elevation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-container{
+    display: block;
+}
+
+.resume-header{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+
+
+.item-container-title {
+    color: #776B5D;
+    font-size: larger;
+    margin: 0rem 0rem 0.3rem 0rem;
+    font-weight: bold;
+}
+
+.want-to-learn{
+    opacity: 0.5;
+}
+
+.item-container-subtitle {
+    color: #776B5D;
+    font-size: large;
+    padding-left: 2%;
+    margin: 0rem 0rem 0.3rem 0rem;
+}
+
+.item-container-paragraph {
+    color: #B0A695;
+    font-size: medium;
+    padding-left: 4%;
+}
+
+.item-container img {
+    width: 80%;
+    height: 80%;
+    
+    object-fit: contain;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+
+.content-left-border {
+    margin-bottom: 20px;
+    /* Adds space between entries */
+    border-left: 4px solid #B0A695;
+    /* Adjust the thickness and color as needed */
+    padding-left: 20px;
+    /* Adds space between the yellow line and the text */
+}
+
+.content-bottom-border {
+    margin: 20px 20px 20px 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+.download-button{
+    background-color: #F3EEEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+.btn{
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+nav.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon {
+    height: auto;
+    width: 3em;
+    margin: 0em 2em;
+}
+
+.sticky-top {
+    background-color: #B0A695;
+    text-align: center;
+}
+
+.nav-link {
+    color: #F3EEEA;
+    width: 100%;
+    /* Full width */
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin: 0 auto;
+    width: auto;
+}
+
+.nav-item {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0em 2em;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+
+    /* Bootstrap's default breakpoint for navbar collapsing */
+    .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse .nav-link {
+        text-align: left;
+        padding-left: 1em;
+        font-size: 1em;
+
+    }
+
+    .navbar-toggler-icon {
+        width: 1em;
+        height: auto;
+        margin-right: 1em;
+        margin-top: -20%;
+        margin-bottom: -20%;
+    }
+
+    .nav-icon {
+        height: auto;
+        width: 2.5em;
+        margin-left: 3%;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0.3em 2em;
+        width: 80%;
+        border-bottom: 1px solid rgba(243,238,234, 0.5);
+    }
+}
+
+.nav-link:hover {
+    color: #808080;
+}
+
+
+
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+}
+
+@media (max-width: 992px) {
+    .home-container {
+        text-align: center;
+    }
+}
+
+
+.profile-image {
+    display: block;
+    margin: 0em 2em;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1em);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.scroll-arrow {
+    width: 1.3em;
+    height: auto;
+    animation: float 2s ease-in-out infinite;
+    display: block;
+    margin: 0 auto;
+}
+
+.section-header, .model-header {
+    text-align: center;
+    background-color: #EBE3D5;
+    display: inline;
+    font-weight: bold;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.section-header-container {
+    text-align: center;
+    margin: 3rem 0rem;
+}
+
+.aboutme-content {
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.aboutme-title {
+    margin-bottom: 0.5em;
+}
+
+.skill-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 1200px) {
+    .aboutme-content {
+        font-size: 1.5rem;
+    }
+}
+
+#CONTACT{
+    background-color: #F3EEEA;
+    max-width:100%;
+}
+
+.contact-container-holder {
+    display: flex;
+    justify-content: center; /* Center children horizontally */
+    flex-wrap: wrap; /* Allow multiple lines if needed */
+}
+
+.contact-infomration-container{
+    font-size: medium;
+    margin: 0em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-infomration-container h6{
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.model-holder {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center; /* This centers the modal vertically */
+    justify-content: center; /* This centers the modal horizontally */
+}
+
+
+.model-board{
+    background-color: #FBF4F0;
+    margin: 5% auto;
+    padding: 1em;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1440px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.model-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3em 0em 1.5em 0em;
+}
+
+.model-header {
+    margin-top: 2em;
+}
+.model-content-holder{
+    /* background-color: #343a40; */
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.model-carousel-container, .model-word-container{
+    background-color: #F3EEEA;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.model-word-title {
+    color: #776B5D;
+    font-size: large;
+    margin: 0rem 0rem 0.3rem 0rem;
+    font-weight: bold;
+}
+
+
+.model-word-paragraph {
+    color: #B0A695;
+    font-size: medium;
+    padding-left: 4%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 4rem;
+    position: relative;
+    top: 0%;
+    right: 0%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel-item img {
+    max-height: 30em; /* Set a fixed height for the image */
+    width: 100%; /* Set width to always be 100% of the carousel item */
+    object-fit: contain; /* Ensure the whole image always fits within the box */
+    object-position: center; /* Center the image within the element's box */
+}
+
+@media (max-width: 700px){
+    .model-holder {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+        align-items: center; /* This centers the modal vertically */
+        justify-content: center; /* This centers the modal horizontally */
+    }
+    .model-content-holder{
+
+        display: block;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .model-carousel-container, .model-word-container{
+        background-color: #F3EEEA;
+        border-radius: 1em;
+        padding: 1em;
+        margin: 1em;
+    }
+    .model-board{
+
+        margin: 5% auto;
+        padding: 0.3em;
+        width: 90%;
+        position: absolute;
+        bottom: 5%;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* This shifts the .model-board back by half its width, centering it */
+    }
+}
